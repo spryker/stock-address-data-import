@@ -45,9 +45,6 @@ class StockAddressDataImportPluginTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function testImportWillImportStockAddressData(): void
     {
         // Arrange
@@ -66,9 +63,6 @@ class StockAddressDataImportPluginTest extends Unit
         $this->assertEquals(1, $dataImporterReportTransfer->getImportedDataSetCount());
     }
 
-    /**
-     * @return void
-     */
     public function testImportWillThrowAnExceptionIfStockDoesNotExist(): void
     {
         // Arrange
@@ -88,9 +82,6 @@ class StockAddressDataImportPluginTest extends Unit
         $stockAddressDataImportPlugin->import($dataImportConfigurationTransfer);
     }
 
-    /**
-     * @return void
-     */
     public function testImportWillThrowAnExceptionIfCountryIsoCodeDoesNotExist(): void
     {
         // Arrange
@@ -109,9 +100,6 @@ class StockAddressDataImportPluginTest extends Unit
         $stockAddressDataImportPlugin->import($dataImportConfigurationTransfer);
     }
 
-    /**
-     * @return void
-     */
     public function testGetImportTypeWillReturnCorrectType(): void
     {
         // Arrange
@@ -124,11 +112,6 @@ class StockAddressDataImportPluginTest extends Unit
         $this->assertSame(StockAddressDataImportConfig::IMPORT_TYPE_STOCK_ADDRESS, $importType);
     }
 
-    /**
-     * @param string $filePath
-     *
-     * @return \Generated\Shared\Transfer\DataImporterConfigurationTransfer
-     */
     protected function getDataImporterReaderConfigurationTransfer(string $filePath): DataImporterConfigurationTransfer
     {
         $dataImporterReaderConfigurationTransfer = new DataImporterReaderConfigurationTransfer();

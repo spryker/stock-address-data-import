@@ -46,11 +46,6 @@ class CountryIsoCodeToIdCountryStep implements DataImportStepInterface
         $dataSet[StockAddressDataSetInterface::ID_COUNTRY] = $idCountry;
     }
 
-    /**
-     * @param string $iso2Code
-     *
-     * @return int|null
-     */
     protected function findIdCountryByIso2Code(string $iso2Code): ?int
     {
         if (array_key_exists($iso2Code, static::$idCountryCache)) {

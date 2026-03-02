@@ -45,33 +45,21 @@ class StockAddressDataImportBusinessFactory extends DataImportBusinessFactory
         return $dataImporter;
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createStockNameToIdStockStep(): DataImportStepInterface
     {
         return new StockNameToIdStockStep();
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createCountryIsoCodeToIdCountryStep(): DataImportStepInterface
     {
         return new CountryIsoCodeToIdCountryStep();
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createRegionNameToIdRegionStep(): DataImportStepInterface
     {
         return new RegionNameToIdRegionStep();
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createStockAddressWriterStep(): DataImportStepInterface
     {
         return new StockAddressWriterStep();

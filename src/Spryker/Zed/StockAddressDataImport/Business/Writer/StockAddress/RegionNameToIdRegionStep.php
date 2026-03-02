@@ -56,12 +56,6 @@ class RegionNameToIdRegionStep implements DataImportStepInterface
         $dataSet[StockAddressDataSetInterface::ID_REGION] = $regionEntity->getIdRegion();
     }
 
-    /**
-     * @param string $regionName
-     * @param string $iso2Code
-     *
-     * @return int|null
-     */
     protected function findIdRegionByRegionNameAndIsoCode(string $regionName, string $iso2Code): ?int
     {
         if (array_key_exists($regionName, static::$idRegionCache)) {
