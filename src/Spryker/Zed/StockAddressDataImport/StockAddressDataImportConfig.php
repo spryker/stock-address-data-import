@@ -13,6 +13,8 @@ use Spryker\Zed\DataImport\DataImportConfig;
 class StockAddressDataImportConfig extends DataImportConfig
 {
     /**
+     * @api
+     *
      * @var string
      */
     public const IMPORT_TYPE_STOCK_ADDRESS = 'stock-address';
